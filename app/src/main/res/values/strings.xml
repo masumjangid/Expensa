@@ -1,0 +1,14 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Expensa</string>
+    <string name="have_a_good_day">Have a good day!</string>
+    <string name="search_" tools:ignore="TypographyEllipsis">Search...</string>
+    <string name="today">Today</string>
+    <string name="month">Month</string>
+    <string name="week">Week</string>
+    <string name="welcome_text">Good Morning, Friend</string>
+    <string name="category_name">Category Name</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="sample_date">March 10th 2024</string>
+    <string name="sample_amount">₹ 190</string>
+</resources>

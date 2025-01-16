@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="34dp"
+    android:height="34dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- Bin Outline -->
+    <path
+        android:fillColor="@color/black"
+        android:pathData="M6,19c0,1.1 0.9,2 2,2h8c1.1,0 2,-0.9 2,-2V7H6v12zM7,4h10v2H7V4z" />
+
+    <!-- Lid -->
+    <path
+        android:fillColor="@color/black"
+        android:pathData="M18,4H6c-0.55,0 -1,0.45 -1,1v2h14V5c0,-0.55 -0.45,-1 -1,-1z" />
+</vector>

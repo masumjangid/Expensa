@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/Greeting"
+        style="@style/WrapContentStyle"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/welcome_text"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Sub_Greeting"
+        style="@style/WrapContentStyle"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/have_a_good_day"
+        android:textColor="#434343"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Greeting" />
+
+    <com.google.android.material.search.SearchBar
+        android:id="@+id/search_bar"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:hint="@string/search_"
+        app:backgroundTint="@color/app_components"
+        app:layout_constraintEnd_toStartOf="@id/filter_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Sub_Greeting" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/filter_btn"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/app_components"
+        app:cardCornerRadius="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/search_bar"
+        app:layout_constraintTop_toTopOf="@id/search_bar"
+        app:rippleColor="@color/app_components"
+        app:strokeWidth="0dp">
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/ic_filter" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:id="@+id/date_category_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search_bar">
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/SelectorCardStyle"
+            android:backgroundTint="@color/app_components">
+
+            <TextView
+                style="@style/SelectorTextStyle"
+                android:text="@string/today" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView style="@style/SelectorCardStyle">
+
+            <TextView
+                style="@style/SelectorTextStyle"
+                android:text="@string/week" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView style="@style/SelectorCardStyle">
+
+            <TextView
+                style="@style/SelectorTextStyle"
+                android:text="@string/month" />
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/date_category_layout" />
+</androidx.constraintlayout.widget.ConstraintLayout>
